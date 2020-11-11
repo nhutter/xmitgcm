@@ -595,6 +595,24 @@ package_state_variables = {
     'QSWtave': dict(dims=['j', 'i'], attrs=dict(
         standard_name="surface_net_upward_shortwave_flux",
         long_name='SEAICE upward freshwater flux (+=up)',
+        units='kg m-2 s-1')),
+    # pkg/autodiff variables
+    'ADJeta': dict(dims=['j','i'], attrs=dict(
+        standard_name="sensitivity_to_sea_surface_height_above_geoid",
+        long_name='Sensitivity to Surface Height Anomaly', units='m')),
+    'ADJtheta': dict(dims=['k','j','i'], attrs=dict(
+        standard_name="sensitivity_to_sea_water_potential_temperature",
+        long_name='Sensitivity to Potential Temperature', units='degree_Celcius')),
+    'ADJsalt': dict(dims=['k','j','i'], attrs=dict(
+        standard_name="sensitivity_to_sea_water_salinity",
+        long_name='Sensitivity to Salinity', units='psu')),
+    'ADJprecip': dict(dims=['j', 'i'], attrs=dict(
+        standard_name="sensitivity_to_sprecipitation_flux",
+        long_name='Sensitivity to Precipitation flux (+=up)',
+        units='kg m-2 s-1')),
+    'ADJrunoff': dict(dims=['j', 'i'], attrs=dict(
+        standard_name="sensitivity_to_runoff",
+        long_name='Sensitivity to Runoff',
         units='kg m-2 s-1'))
 }
 
